@@ -17,11 +17,54 @@ Visual components and Python
 
 
 ## Experiment:
+<img width="890" height="550" alt="image" src="https://github.com/user-attachments/assets/63af15ca-f0b6-43f9-8b2e-31f594e964c3" />
 
 
-## Program
+
+## Program:
+```
+arr_time=float(input("Enterthe meaninterarrival timeof objects fromFeeder(insecs):"))
+ser_time1=float(input("Enterthe mean inter servicetimeof Lathe Machine1(in secs): "))
+ser_time2=float(input("Enterthe mean inter servicetimeof Lathe Machine2(in secs): "))
+ser_time3=float(input("Enterthe mean inter servicetimeof Lathe Machine3(in secs): "))
+Robot_time=float(input("EntertheAdditional timetakenfor theRobot(insecs): "))
+lam=1/arr_time
+mu1=1/(ser_time1+Robot_time)
+mu2=1/(ser_time2+Robot_time)
+mu3=1/(ser_time3+Robot_time)
+print("-----------------------------------------------------------------------")
+print("SeriesQueueswithinfinitecapacity-OpenJacksonNetwork")
+print("-----------------------------------------------------------------------")
+if(lam< mu1)and(lam< mu2) and(lam< mu3):
+Ls1=lam/(mu1-lam)
+Ls2=lam/(mu2-lam)
+Ls3=lam/(mu3-lam)
+Ls=Ls1+Ls2+Ls3
+Lq1=Ls1-lam/mu1
+Lq2=Ls2-lam/mu2
+Lq3=Ls3-lam/mu3
+Wq1=Lq1/lam
+Wq2=Lq2/lam
+Wq3=Lq3/lam
+Ws=Ls/(3*lam)
+print("Averagenumberofobjects inthe system S1:%0.2f"%Ls1)
+print("Averagenumberofobjects inthe system S2:%0.2f"%Ls2)
+print("Averagenumberofobjects inthe system S3:%0.2f"%Ls3)
+print("Averagenumberofobjects inthe overallsystem : %0.2f"%Ls)
+print("Averagenumberofobjects inthe conveyorS1 : %0.2f"%Lq1)
+print("Averagenumberofobjects inthe conveyorS2 : %0.2f"%Lq2)
+print("Averagenumberofobjects inthe conveyorS3 : %0.2f"%Lq3)
+print("Averagewaiting timeofan object intheconveyor S1: %0.2fsecs"%Wq1)
+print("Averagewaiting timeofan object intheconveyor S2: %0.2fsecs"%Wq2)
+print("Averagewaiting timeofan object intheconveyor S3: %0.2fsecs"%Wq3)
+else:
+print("Warning!ObjectsOver flowwillhappenintheconveyor")
+print("----------------------------------------------------------------------")
+```
 
 
-## Output
+## Output:
+
+
 
 ## Result

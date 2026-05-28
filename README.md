@@ -64,6 +64,7 @@ print("----------------------------------------------------------------------")
 
 ## Output:
 <img width="768" height="451" alt="image" src="https://github.com/user-attachments/assets/d1e63390-464e-4cc3-9bdc-c7fd7014fdba" />
+
 ## Result:
 Thus, the program has been executed successfully and the required parameters have been calculated as per the given
 conditions
